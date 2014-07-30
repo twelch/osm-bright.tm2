@@ -1,17 +1,18 @@
 _prefs: 
+  baselayer: ''
   saveCenter: true
 _properties: 
   bridge: 
     "group-by": layer
-attribution: <a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
 bounds: 
   - -180
   - -85.0511
   - 180
   - 85.0511
 center: 
-  - -73.98073196411133
-  - 40.75892792712664
+  - -122.7231216430664
+  - 45.509219121276494
   - 15
 description: ''
 format: "png8:m=h"
@@ -19,12 +20,12 @@ interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 0
-mtime: 1395955397710
-name: OSM Bright 2
-scale: 1
-source: "mapbox:///mapbox.mapbox-streets-v4"
+name: PDX Landslides
+source: "mapbox:///mapbox.mapbox-terrain-v1,twelch.ct9e8kt9,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss
   - labels.mss
+  - slido.mss
+  - terrain.mss
 template: ''

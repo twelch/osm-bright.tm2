@@ -88,7 +88,7 @@ Map {
 
 // ---------------------------------------------------------------------
 // Landuse areas 
-
+/*
 #landuse {
   // Land-use and land-cover are not well-separated concepts in
   // OpenStreetMap, so this layer includes both. The 'class' field
@@ -104,19 +104,21 @@ Map {
     [class='wood'] { polygon-fill: #6a4; polygon-gamma: 0.5; }
   }
 }
+*/
 
 // ---------------------------------------------------------------------
 // Buildings 
 
-#building [zoom<=17]{
+#building [zoom<=16]{
   // At zoom level 13, only large buildings are included in the
   // vector tiles. At zoom level 14+, all buildings are included.
   polygon-fill: darken(@land, 50%);
-  opacity: 0.1;
+  opacity: 0.2;
 }
+
 // Seperate attachments are used to draw buildings with depth
 // to make them more prominent at high zoom levels
-#building [zoom>=18]{
+#building [zoom>=16]{
 ::wall { polygon-fill:mix(@land, #000, 85); }
 ::roof {
   polygon-fill: darken(@land, 5%);
@@ -148,4 +150,3 @@ Map {
     }  
   }
 }
-

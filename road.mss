@@ -15,8 +15,8 @@
 // The main road style is for all 3 road layers and divided into 2 main
 // attachments. The 'case' attachment is 
 
+/*
 #road, #bridge, #tunnel {
-  
   // casing/outlines & single lines
   ::case[zoom>=6]['mapnik::geometry_type'=2] {
     [class='motorway'] {
@@ -146,5 +146,33 @@
       	h/line-dasharray: 1,31;
       }
     }
+  }
+}
+*/
+
+// Roads & Railways //
+
+#tunnel { opacity: 0.5; }
+
+#road,
+#tunnel,
+#bridge {
+  ['mapnik::geometry_type'=2] {
+    line-opacity: 1;
+    line-color: #ccc;
+    line-width: 0.5;
+    [class='motorway'],
+    [class='main'] {
+      [zoom>=10] { line-width: 1; }
+      [zoom>=12] { line-width: 2; }
+      [zoom>=14] { line-width: 3; }
+      [zoom>=16] { line-width: 5; }
+    }
+    [class='street'],
+    [class='street_limited'] {
+      [zoom>=14] { line-width: 1; }
+      [zoom>=16] { line-width: 2; }
+    }
+    [class='street_limited'] { line-dasharray: 4,1; }
   }
 }
